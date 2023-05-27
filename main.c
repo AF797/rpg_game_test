@@ -10,19 +10,6 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-typedef struct character
-
-{
-	char *ch_name;
-	
-	int ch_hp;
-	int ch_atk;
-	int ch_dps;
-	
-	int pa;
-	
-} character;
-
 int main(int argc, char *argv[])
 {
 	char map[5][21];
@@ -64,24 +51,24 @@ int main(int argc, char *argv[])
 	map[4][15] = 'B';
 	map[2][10] = 'O';
 	
-	printf("¾î¼­¿À½Ã¿À ´ëÇù\n");
+	printf("ì–´ì„œì˜¤ì‹œì˜¤ ëŒ€í˜‘\n");
 	printf("------------------\n");
-	printf("¾Æ¹«Å° press");
+	printf("ì•„ë¬´í‚¤ press");
 	_getch();
 	system("cls");
-	printf("Ã³À½ ºË´Â ºĞ°°Àºµ¥ ´ëÇùÀÇ ÀÌ¸§À» ¿©ÂŞ¾î ºÁµµ µÇ°Ú¼Ò?\n");
+	printf("ì²˜ìŒ ëµ™ëŠ” ë¶„ê°™ì€ë° ëŒ€í˜‘ì˜ ì´ë¦„ì„ ì—¬ì­ˆì–´ ë´ë„ ë˜ê² ì†Œ?\n");
 	printf("------------------------------------------------------\n");
-	printf("¾Æ¹«Å° press");
+	printf("ì•„ë¬´í‚¤ press");
 	_getch();
 	system("cls");
 	while(1)
 	{
-		printf("ÀÌ¸§: ");
+		printf("ì´ë¦„: ");
 		scanf("%s", name);
 		system("cls");
-		printf("%s ´ëÇùÀÌ±¸·Á\n", name);
+		printf("%s ëŒ€í˜‘ì´êµ¬ë ¤\n", name);
 		printf("------------------\n");
-		printf("¿¹ (y)  ¾Æ´Ï¿ä(n)");
+		printf("ì˜ˆ (y)  ì•„ë‹ˆìš”(n)");
 		char ss = _getch();
 		if (ss == 'y' || ss == 'Y')
 		{
@@ -91,17 +78,17 @@ int main(int argc, char *argv[])
 		else
 		{
 			system("cls");
-			printf("±×·¯¸é ´ëÇùÀÇ ÀÌ¸§Àº ¹«¾ùÀÌ¿À?\n");
+			printf("ê·¸ëŸ¬ë©´ ëŒ€í˜‘ì˜ ì´ë¦„ì€ ë¬´ì—‡ì´ì˜¤?\n");
 		}
 	}
-	printf("%s ´ëÇù²²¼­´Â È­»êÆÄ·Î º¸ÀÌ½Ã´Âµ¥ ¾Æ¸¶ ÀÌ°÷¿¡ ¼ö·ÃÇÏ·¯ ¿À½ÅµíÇÏ¿À\n", name);
+	printf("%s ëŒ€í˜‘ê»˜ì„œëŠ” í™”ì‚°íŒŒë¡œ ë³´ì´ì‹œëŠ”ë° ì•„ë§ˆ ì´ê³³ì— ìˆ˜ë ¨í•˜ëŸ¬ ì˜¤ì‹ ë“¯í•˜ì˜¤\n", name);
 	printf("------------------------------------------------------------------------\n");
-	printf("¾Æ¹«Å° press");
+	printf("ì•„ë¬´í‚¤ press");
 	_getch();
 	system("cls");
-	printf("Áñ°Å¿î ½Ã°£ º¸³»½Ã¿À!!\n");
+	printf("ì¦ê±°ìš´ ì‹œê°„ ë³´ë‚´ì‹œì˜¤!!\n");
 	printf("----------------------\n");
-	printf("¾Æ¹«Å° press");
+	printf("ì•„ë¬´í‚¤ press");
 	_getch();
 	system("cls");
 	
@@ -117,13 +104,13 @@ int main(int argc, char *argv[])
 			printf("|\n");
 		}
 		printf("-----------------------\n");
-		printf("S:»óÁ¡  C:Ã¢°í  H:ÈÆ·ÃÀå  B:ºñ¹«Àå\n");
-		printf("O: ³» Ä³¸¯ÅÍ\n");
+		printf("S:ìƒì   C:ì°½ê³   H:í›ˆë ¨ì¥  B:ë¹„ë¬´ì¥\n");
+		printf("O: ë‚´ ìºë¦­í„°\n");
 		
 		char c;
-		c = _getch();           // 3. ¹æÇâÅ°°¡ ÀÔ·Â‰çÀ» ¶§ 224 00 ÀÌ ¹öÆÛ¿¡ ÀÖ´Ù. 224ºÎÅÍ »©ÁØ´Ù. 
-        if (c == -32) {           // 4. -32·Î ÀÔ·ÂµÇ¸é
-            c = _getch();        // 5. µÚÀÇ °ª 00À» ÆÇº°ÇÏ¿© ÁÂ¿ì»óÇÏ Ãâ·Â
+		c = _getch();           // 3. ë°©í–¥í‚¤ê°€ ì…ë ¥Â‰ç‘› ë•Œ 224 00 ì´ ë²„í¼ì— ìˆë‹¤. 224ë¶€í„° ë¹¼ì¤€ë‹¤. 
+        if (c == -32) {           // 4. -32ë¡œ ì…ë ¥ë˜ë©´
+            c = _getch();        // 5. ë’¤ì˜ ê°’ 00ì„ íŒë³„í•˜ì—¬ ì¢Œìš°ìƒí•˜ ì¶œë ¥
             switch (c) {           
                 case LEFT:
                     if(x == 0 || ((y == 0 || y == 4) && (x == 6 || x == 16)))
@@ -170,11 +157,11 @@ int main(int argc, char *argv[])
 				while(1)
 				{
 					printf("----------------------\n");
-					printf("1. µ¿ÀÚ»ï	1000¿ø\n");
-					printf("2. ¸í°Ë		1000¿ø\n");
-					printf("3. ¸í¹æÆĞ	1000¿ø\n");
+					printf("1. ë™ìì‚¼	1000ì›\n");
+					printf("2. ëª…ê²€		1000ì›\n");
+					printf("3. ëª…ë°©íŒ¨	1000ì›\n");
 					printf("----------------------\n");
-					printf("ÀÜ¾× : %d  ³ª°¡±â : q\n", money);
+					printf("ì”ì•¡ : %d  ë‚˜ê°€ê¸° : q\n", money);
 					
 					c = _getch();
 					if (c == '1' && money >= 1000)
@@ -191,9 +178,9 @@ int main(int argc, char *argv[])
 						if (gar_turn == 4)
 						{
 							system("cls");
-							printf("¾îµğ µ·µµ ¾ø´Â °ÅÁö³ğÀÌ!!\n");
-							printf("½â ²¨Á®!!\n");
-							printf("¾Æ¹«Å° press");
+							printf("ì–´ë”” ëˆë„ ì—†ëŠ” ê±°ì§€ë†ˆì´!!\n");
+							printf("ì© êº¼ì ¸!!\n");
+							printf("ì•„ë¬´í‚¤ press");
 							c = _getch();
 							system("cls");
 							break;
@@ -201,8 +188,8 @@ int main(int argc, char *argv[])
 						else
 						{
 							system("cls");
-							printf("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ´Ù³×!\n");
-							printf("¾Æ¹«Å° press");
+							printf("ì”ì•¡ì´ ë¶€ì¡±í•˜ë‹¤ë„¤!\n");
+							printf("ì•„ë¬´í‚¤ press");
 							c = _getch();
 						}		 
 					}
@@ -218,9 +205,9 @@ int main(int argc, char *argv[])
 						if (gar_turn == 4)
 						{
 							system("cls");
-							printf("¾îµğ µ·µµ ¾ø´Â °ÅÁö³ğÀÌ!!\n");
-							printf("½â ²¨Á®!!\n");
-							printf("¾Æ¹«Å° press");
+							printf("ì–´ë”” ëˆë„ ì—†ëŠ” ê±°ì§€ë†ˆì´!!\n");
+							printf("ì© êº¼ì ¸!!\n");
+							printf("ì•„ë¬´í‚¤ press");
 							c = _getch();
 							system("cls");
 							break;
@@ -228,8 +215,8 @@ int main(int argc, char *argv[])
 						else
 						{
 							system("cls");
-							printf("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ´Ù³×!\n");
-							printf("¾Æ¹«Å° press");
+							printf("ì”ì•¡ì´ ë¶€ì¡±í•˜ë‹¤ë„¤!\n");
+							printf("ì•„ë¬´í‚¤ press");
 							c = _getch();
 						}		 
 					}
@@ -245,9 +232,9 @@ int main(int argc, char *argv[])
 						if (gar_turn == 4)
 						{
 							system("cls");
-							printf("¾îµğ µ·µµ ¾ø´Â °ÅÁö³ğÀÌ!!\n");
-							printf("½â ²¨Á®!!\n");
-							printf("¾Æ¹«Å° press");
+							printf("ì–´ë”” ëˆë„ ì—†ëŠ” ê±°ì§€ë†ˆì´!!\n");
+							printf("ì© êº¼ì ¸!!\n");
+							printf("ì•„ë¬´í‚¤ press");
 							c = _getch();
 							system("cls");
 							break;
@@ -255,8 +242,8 @@ int main(int argc, char *argv[])
 						else
 						{
 							system("cls");
-							printf("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ´Ù³×!\n");
-							printf("¾Æ¹«Å° press");
+							printf("ì”ì•¡ì´ ë¶€ì¡±í•˜ë‹¤ë„¤!\n");
+							printf("ì•„ë¬´í‚¤ press");
 							c = _getch();
 						}		 
 					}
@@ -275,13 +262,13 @@ int main(int argc, char *argv[])
 				system("cls");
 				while(1)
 				{
-					printf("      Ã¢ °í\n");
+					printf("      ì°½ ê³ \n");
 					printf("-----------------\n");
-					printf("  µ¿ÀÚ»ï: %d\n", inven[0]);
-					printf("  ¸í  °Ë: %d\n", inven[1]);
-					printf("  ¸í¹æÆĞ: %d\n", inven[2]);
+					printf("  ë™ìì‚¼: %d\n", inven[0]);
+					printf("  ëª…  ê²€: %d\n", inven[1]);
+					printf("  ëª…ë°©íŒ¨: %d\n", inven[2]);
 					printf("-----------------\n");
-					printf("ÀÜ¾× : %d  ³ª°¡±â : q\n", money);
+					printf("ì”ì•¡ : %d  ë‚˜ê°€ê¸° : q\n", money);
 					
 					c = _getch();
 					if (c == 'q')
@@ -298,15 +285,15 @@ int main(int argc, char *argv[])
 				system("cls");
 				while(1)
 				{
-					printf("      ÈÆ·ÃÀå\n");
+					printf("      í›ˆë ¨ì¥\n");
 					printf("-----------------\n");
-					printf("  (ÈÆ·Ã½Ã)  (+4)\n");
-					printf("  ³» HP    : %d\n", hp);
-					printf("  ³» °ø°İ·Â: %d\n", atk);
-					printf("  ³» ¹æ¾î·Â: %d\n", dps);
+					printf("  (í›ˆë ¨ì‹œ)  (+4)\n");
+					printf("  ë‚´ HP    : %d\n", hp);
+					printf("  ë‚´ ê³µê²©ë ¥: %d\n", atk);
+					printf("  ë‚´ ë°©ì–´ë ¥: %d\n", dps);
 					printf("-----------------\n");
-					printf("¼ıÀÚ¸¦ ´©¸£¸é ÈÆ·ÃÇÑ´Ù³× (100¿ø)\n");
-					printf("ÀÜ¾× : %d  ³ª°¡±â : q\n", money);
+					printf("ìˆ«ìë¥¼ ëˆ„ë¥´ë©´ í›ˆë ¨í•œë‹¤ë„¤ (100ì›)\n");
+					printf("ì”ì•¡ : %d  ë‚˜ê°€ê¸° : q\n", money);
 					
 					c = _getch();
 					if (c == '1' && money >= 100)
@@ -318,8 +305,8 @@ int main(int argc, char *argv[])
 					else if (c == '1' && money < 100)
 					{
 						system("cls");
-						printf("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ´Ù³×!\n");
-						printf("¾Æ¹«Å° press");
+						printf("ì”ì•¡ì´ ë¶€ì¡±í•˜ë‹¤ë„¤!\n");
+						printf("ì•„ë¬´í‚¤ press");
 						c = _getch();
 					}
 					if (c == '2' && money >= 100)
@@ -331,8 +318,8 @@ int main(int argc, char *argv[])
 					else if (c == '2' && money < 100)
 					{
 						system("cls");
-						printf("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ´Ù³×!\n");
-						printf("¾Æ¹«Å° press");
+						printf("ì”ì•¡ì´ ë¶€ì¡±í•˜ë‹¤ë„¤!\n");
+						printf("ì•„ë¬´í‚¤ press");
 						c = _getch();
 					}
 					if (c == '3' && money >= 100)
@@ -344,8 +331,8 @@ int main(int argc, char *argv[])
 					else if (c == '3' && money < 100)
 					{
 						system("cls");
-						printf("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ´Ù³×!\n");
-						printf("¾Æ¹«Å° press");
+						printf("ì”ì•¡ì´ ë¶€ì¡±í•˜ë‹¤ë„¤!\n");
+						printf("ì•„ë¬´í‚¤ press");
 						c = _getch();
 					}
 					else if (c == 'q')
@@ -365,11 +352,11 @@ int main(int argc, char *argv[])
 				system("cls");
 				while(1)
 				{
-					printf("      ºñ¹«Àå\n");
+					printf("      ë¹„ë¬´ì¥\n");
 					printf("--------------------\n");
-					printf("ºñ¹«¸¦ ÇÏ½Ã°Ú½À´Ï±î?\n");
+					printf("ë¹„ë¬´ë¥¼ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n");
 					printf("\n");
-					printf("¿¹ (y)  ¾Æ´Ï¿ä (n)\n");
+					printf("ì˜ˆ (y)  ì•„ë‹ˆìš” (n)\n");
 					printf("--------------------\n");
 					
 					c = _getch();
@@ -377,7 +364,7 @@ int main(int argc, char *argv[])
 					{
 						system("cls");
 						srand(time(NULL));
-						ch_name = "¾Æ¹«°³";
+						ch_name = "ì•„ë¬´ê°œ";
 						if(atk <= 41)
 						{
 							ch_hp = 50 + (rand()%5+1 * rand()%5+1);
@@ -402,8 +389,8 @@ int main(int argc, char *argv[])
 							printf("%s\n", name);
 							printf("HP: %d\n", hhp);
 							printf("---------------------------\n");
-							printf("(1) °ø°İ (2)±â ¸ğÀ¸±â\n");
-							printf("(3) ½ºÅ³ (%dÅÏ ³²À½)\n", turn);
+							printf("(1) ê³µê²© (2)ê¸° ëª¨ìœ¼ê¸°\n");
+							printf("(3) ìŠ¤í‚¬ (%dí„´ ë‚¨ìŒ)\n", turn);
 							c = _getch();
 							system("cls");
 							if(c == '1')
@@ -411,9 +398,9 @@ int main(int argc, char *argv[])
 								ch_hp -= hatk - ch_dps;
 								if (turn > 0)
 									turn -= 1;
-								printf("%d¸¸Å­ ÇÇÇØ¸¦ ÀÔÇû´Ù!\n", hatk - ch_dps);
+								printf("%dë§Œí¼ í”¼í•´ë¥¼ ì…í˜”ë‹¤!\n", hatk - ch_dps);
 								printf("----------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 							}
@@ -422,11 +409,11 @@ int main(int argc, char *argv[])
 								hhp += rand()%4+3;
 								hatk += rand()%3;
 								hdps += rand()%3;
-								printf("±â¸¦ ¸ğ¿Í ´õ °­ÇØ Á³´Ù.\n");
+								printf("ê¸°ë¥¼ ëª¨ì™€ ë” ê°•í•´ ì¡Œë‹¤.\n");
 								if (turn > 0)
 									turn -= 1;
 								printf("----------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 							}
@@ -469,25 +456,25 @@ int main(int argc, char *argv[])
 							    printf("                                                  \n");
 							    printf("                                                  \n");
 							    printf("                                                  \n");
-								printf("    ÀÌ  ½Ê  »ç  ¼ö  ¸Å  È­  °Ë  ¹ı  !  !\n");
+								printf("    ì´  ì‹­  ì‚¬  ìˆ˜  ë§¤  í™”  ê²€  ë²•  !  !\n");
 								
 								ch_hp -= hatk * 2;
 								turn = 4;
 								printf("--------------------------------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
-								printf("%d¸¸Å­ ÇÇÇØ¸¦ ÀÔÇû´Ù!\n", hatk * 2);
+								printf("%dë§Œí¼ í”¼í•´ë¥¼ ì…í˜”ë‹¤!\n", hatk * 2);
 								printf("-------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 							}
 							else if(c == '3' && turn != 0)
 							{
-								printf("%dÅÏÀÌ Áö³ª¾ß »ç¿ëÇÒ ¼ö ÀÖ´Ù!\n", turn);
+								printf("%dí„´ì´ ì§€ë‚˜ì•¼ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤!\n", turn);
 								printf("----------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 								continue;
@@ -497,14 +484,14 @@ int main(int argc, char *argv[])
 							
 							if(ch_hp <= 0)
 							{
-								printf("%sÀ»(¸¦) ¾²·¯¶ß·È´Ù!!\n", ch_name);
+								printf("%sì„(ë¥¼) ì“°ëŸ¬ëœ¨ë ¸ë‹¤!!\n", ch_name);
 								printf("----------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
-								printf("100¿øÀ» ¾ò¾ú´Ù!!\n");
+								printf("100ì›ì„ ì–»ì—ˆë‹¤!!\n");
 								printf("----------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 								money += 100;
@@ -515,9 +502,9 @@ int main(int argc, char *argv[])
 							if (ene == 1 || ene == 3)
 							{
 								hhp -= ch_atk - hdps;
-								printf("%d¸¸Å­ ÇÇÇØ¸¦ ÀÔ¾ú´Ù!\n", ch_atk - hdps);
+								printf("%dë§Œí¼ í”¼í•´ë¥¼ ì…ì—ˆë‹¤!\n", ch_atk - hdps);
 								printf("----------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 							}
@@ -526,26 +513,26 @@ int main(int argc, char *argv[])
 								ch_hp += rand()%4+3;
 								ch_atk += rand()%3;
 								ch_dps += rand()%3;
-								printf("%sÀÌ(°¡) ±â¸¦ ¸ğ¿Í ´õ °­ÇØ Á³´Ù!\n", ch_name);
+								printf("%sì´(ê°€) ê¸°ë¥¼ ëª¨ì™€ ë” ê°•í•´ ì¡Œë‹¤!\n", ch_name);
 								printf("---------------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 							}
 							else if (ene == 5)
 							{
 								hhp -= ch_atk * 2;
-								printf("Ãµ ÇÏ »ï ½Ê À° °Ë ¹ı !\n");
+								printf("ì²œ í•˜ ì‚¼ ì‹­ ìœ¡ ê²€ ë²• !\n");
 								printf("----------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 							}
 							if(hhp <= 0)
 							{
-								printf("%s¿¡°Ô ¾²·¯Á³´Ù!!\n", ch_name);
+								printf("%sì—ê²Œ ì“°ëŸ¬ì¡Œë‹¤!!\n", ch_name);
 								printf("----------------------\n");
-								printf("¾Æ¹«Å° press");
+								printf("ì•„ë¬´í‚¤ press");
 								_getch();
 								system("cls");
 								break;
