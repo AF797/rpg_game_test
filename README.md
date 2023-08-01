@@ -5,5 +5,5 @@
 
 장르: 무협 RPG
 
-## 실행 사진
-~
+## 실행 영상
+![rpg_game_test](https://github.com/AF797/rpg_game_test/assets/86837707/f9b2abd2-d486-4a4a-82b3-2d67c8ec51d4)
