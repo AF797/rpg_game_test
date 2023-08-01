@@ -7,3 +7,5 @@
 
 ## 실행 영상
 ![rpg_game_test](https://github.com/AF797/rpg_game_test/assets/86837707/f9b2abd2-d486-4a4a-82b3-2d67c8ec51d4)
+
+PS.영상이 버벅거리는거는 GIF 변환 프레임 이슈이다..
